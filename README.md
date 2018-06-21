@@ -1,7 +1,14 @@
-每个小组根据自己的feature新建一个文件夹，在该文件夹下进行开发,要求有readme和test文件
+局部降噪B组
 
-例：teapot---|--- README.md
+conda env create --file environment.yml
 
-​		       |--- render.py
+conda install --file requirements.txt -y
 
-​	               |--- test.py
+pip install -e .
+
+测试方法：
+pytest --cov-report=html --cov=temporal_denoising --ignore=temporal_denoising.py test_denoising.py
+根据输出的html可知覆盖率达到100%
+不过依旧是个很简单的实现
+还有待进一步优化
+有一些备用图像可以测试看看
